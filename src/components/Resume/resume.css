@@ -1,0 +1,459 @@
+.resume {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  margin-top: 12vh;
+}
+
+.resume .resumeLeftWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+
+.resume .resumeLeftWrapper .resumeLeftWrapperHeader {
+  font-size: clamp(0.1rem, 2.3vw, 30rem);
+  font-weight: 700;
+}
+
+.resume .resumeLeftWrapper .resumeLeftWrapperDescription {
+  font-size: clamp(0.1rem, 0.8vw, 30rem);
+  color: #a0a6b3;
+  width: 80%;
+}
+
+.resume .resumeLeftWrapper .resumeButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin-top: clamp(0.5rem, 2vw, 13rem);
+}
+
+.resume .resumeLeftWrapper .resumeButtons button {
+  font-size: clamp(0.1rem, 0.8vw, 30rem);
+  width: 100%;
+  margin-bottom: clamp(0.1rem, 0.6vw, 5rem); /* Clamped margin */
+  padding: clamp(0rem, 0.5vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+  border-radius: clamp(0.5em, 1vw, 200em);
+  border: none;
+  background-color: #0a0f29;
+}
+
+.resume .resumeLeftWrapper .resumeButtons button:hover {
+  background-color: #51a5ff;
+}
+
+.resume .resumeRightWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 75%;
+  margin-left: clamp(0.5rem, 2vw, 15rem);
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.resume .resumeRightWrapper .resumeRightWrapperHeader {
+  font-size: clamp(0.1rem, 1.5vw, 30rem);
+  font-weight: 700;
+}
+
+.resume .resumeRightWrapper .resumeRightWrapperDescription {
+  font-size: clamp(0.1rem, 0.8vw, 30rem);
+  color: #a0a6b3;
+  width: 60%;
+}
+.resume .resumeRightWrapper .resumeCardExperienceContainer,
+.resume .resumeRightWrapper .resumeCardEducationContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+  grid-gap: clamp(0.3rem, 1vw, 8rem); /* Clamped space between the items */
+  margin-top: clamp(0.5rem, 3vw, 20rem);
+  max-height: clamp(30vh, 43.7vh, 60vh); /* Clamped max-height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden;
+  box-sizing: border-box; /* Ensures padding/border are included in total width */
+}
+
+.resume .resumeRightWrapper .resumeCardExperienceContainer .resumeCard {
+  padding: clamp(0.25rem, 1vw, 10rem) clamp(0.5rem, 2vw, 13rem); /* Clamped padding */
+  background-color: #1a2148;
+  height: clamp(10vh, 17vh, 30vh); /* Clamped height */
+  width: clamp(10vw, 20vw, 30vw); /* Clamped width */
+  display: flex;
+  flex-direction: column;
+  border-radius: clamp(0.5em, 1.5vw, 200em);
+}
+
+.resume
+  .resumeRightWrapper
+  .resumeCardExperienceContainer
+  .resumeCard
+  .resumeCardYear {
+  font-size: clamp(0.1rem, 0.8vw, 30rem);
+  color: #00ffff;
+}
+
+.resume
+  .resumeRightWrapper
+  .resumeCardExperienceContainer
+  .resumeCard
+  .resumeCardNameContainer,
+.resumeCardAwardContainer {
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the left */
+  align-items: flex-start; /* Aligns content to the bottom */
+  height: 100%; /* Keep height at 100% */
+}
+
+.resume .resumeRightWrapper .resumeCardExperienceContainer .resumeCard span {
+  color: #00ffff;
+}
+
+.resume
+  .resumeRightWrapper
+  .resumeCardExperienceContainer
+  .resumeCard
+  .resumeCardName {
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the left */
+  align-items: flex-end; /* Aligns content to the bottom */
+  font-size: clamp(0.1rem, 1.2vw, 30rem);
+}
+
+.resume
+  .resumeRightWrapper
+  .resumeCardExperienceContainer
+  .resumeCard
+  .resumeCardLocContainer {
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the left */
+  align-items: flex-end; /* Aligns content to the bottom */
+  font-size: clamp(0.1rem, 0.8vw, 30rem);
+  height: auto; /* Keep height at 100% */
+}
+
+.resume
+  .resumeRightWrapper
+  .resumeCardExperienceContainer
+  .resumeCard
+  .resumeCardLocContainer
+  .LocBullet {
+  display: flex;
+  justify-content: flex-start; /* Aligns content to the left */
+  align-items: flex-start; /* Aligns content to the bottom */
+  font-size: clamp(0.1rem, 0.8vw, 30rem);
+  margin-right: clamp(0.1rem, 0.5vw, 3.5rem);
+  height: 100%; /* Keep height at 100% */
+  color: #00ffff;
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainer {
+  font-size: clamp(0.1rem, 3vw, 30rem);
+  display: flex;
+  flex-direction: row;
+  margin-top: clamp(0.5rem, 3vw, 20rem);
+  max-height: clamp(34vh, 15vh, 60vh); /* Clamped max-height */
+  max-width: clamp(30vw, 15vw, 50vw); /* Clamped max-width */
+  min-height: clamp(34vh, 15vh, 60vh); /* Clamped max-height */
+  min-width: clamp(30vw, 15vw, 50vw);
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden;
+  box-sizing: border-box; /* Ensures padding/border are included in total width */
+  flex-wrap: wrap; /* Wrap the content */
+  gap: clamp(0.3rem, 1vw, 8rem); /* Clamped space between the items */
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainer > div:hover {
+  color: #00ffff; /* No transition for the color */
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainer > div span {
+  transition: transform 0.3s ease-in-out; /* Transition only for scaling effect */
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainer > div:hover span {
+  transform: scale(1.1); /* Scale text on hover */
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainer div {
+  display: flex;
+  justify-content: center; /* Aligns content to the center */
+  align-items: center; /* Aligns content to the center */
+  background-color: #1a2148;
+  border-radius: clamp(0.5em, 1.5vw, 200em);
+  max-height: clamp(10vh, 25vh, 5vh); /* Clamped height */
+  min-height: clamp(10vh, 25vh, 5vh);
+  max-width: clamp(5vw, 0vw, 10vw);
+  min-width: clamp(5vw, 0vw, 10vw); /* Clamped width */
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainer div img {
+  width: clamp(5px, 3vw, 310px);
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Transition only for image scaling effect */
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainer .skillCpp:hover img {
+  filter: brightness(0) saturate(100%) invert(55%) sepia(36%) saturate(501%)
+    hue-rotate(130deg) brightness(120%) contrast(150%); /* Instant image color effect */
+  transform: scale(1.1); /* Smooth scaling effect */
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainer div .skillMysql {
+  width: clamp(5px, 4vw, 500px);
+  height: auto;
+  transition: ease-in-out 0.3s; /* For image scaling effect */
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainer div:hover .skillMysql {
+  transform: scale(1.1); /* For image scaling effect */
+}
+
+.resume .resumeRightWrapper .resumeAboutMeContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: clamp(0.5rem, 3vw, 20rem);
+  width: 100%;
+  height: auto;
+  flex-wrap: nowrap;
+}
+
+.resume .resumeRightWrapper .resumeAboutMeContainer span {
+  color: #6b727e;
+}
+
+.resume .resumeRightWrapper .resumeAboutMeContainer .leftAboutMeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-size: clamp(0.1rem, 1.2vw, 30rem);
+}
+
+.resume .resumeRightWrapper .resumeAboutMeContainer .rightAboutMeContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  font-size: clamp(0.1rem, 1.2vw, 30rem);
+}
+
+.resume .resumeRightWrapper .resumeAboutMeContainer .leftAboutMeContainer div,
+.resume .resumeRightWrapper .resumeAboutMeContainer .rightAboutMeContainer div {
+  margin-bottom: clamp(0.5rem, 2vw, 13rem);
+}
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: clamp(0.1em, 0.5vw, 3em); /* Width of the entire scrollbar */
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+}
+
+/* Handle (the scrolling element itself) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: clamp(0.5em, 2vw, 1.5em); /* Rounded edges */
+}
+
+/* Handle on hover 
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}*/
+
+.resume .resumeRightWrapper .cardsContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: clamp(0.5rem, 3vw, 20rem);
+  width: calc(100% - 1rem);
+  height: auto;
+
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .resumeWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: clamp(0.2rem, 1vw, 1rem);
+  }
+
+  .resume {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    width: 80%;
+  }
+
+  .resume .resumeLeftWrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: clamp(0.5rem, 2vw, 13rem);
+  }
+
+  .resume .resumeLeftWrapper .resumeLeftWrapperHeader {
+    font-size: clamp(0.1rem, 5vw, 30rem);
+  }
+
+  .resume .resumeLeftWrapper .resumeLeftWrapperDescription {
+    font-size: clamp(0.1rem, 2vw, 30rem);
+    width: 100%;
+  }
+
+  .resume .resumeLeftWrapper .resumeButtons {
+    width: 100%;
+    margin-top: clamp(0.5rem, 4vw, 13rem);
+  }
+
+  .resume .resumeLeftWrapper .resumeButtons button {
+    font-size: clamp(0.1rem, 4vw, 30rem);
+    width: 100%;
+    margin-bottom: clamp(0.1rem, 1.5vw, 5rem);
+    padding: clamp(0rem, 1vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+  }
+
+  .resume .resumeRightWrapper {
+    width: 100%;
+    margin-left: 0;
+    margin-top: clamp(0.5rem, 3vw, 13rem);
+  }
+
+  .resume .resumeRightWrapper .resumeRightWrapperHeader {
+    font-size: clamp(0.1rem, 6vw, 30rem);
+  }
+
+  .resume .resumeRightWrapper .resumeRightWrapperDescription {
+    font-size: clamp(0.1rem, 2vw, 30rem);
+    width: 100%;
+  }
+
+  .resume .resumeRightWrapper .resumeCardExperienceContainer,
+  .resume .resumeRightWrapper .resumeCardEducationContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: clamp(0.3rem, 2vw, 8rem);
+    margin-top: clamp(0.5rem, 3vw, 20rem);
+    max-height: auto;
+  }
+
+  .resume .resumeRightWrapper .resumeCardExperienceContainer .resumeCard {
+    padding: clamp(0.25rem, 2vw, 10rem) clamp(0.5rem, 2vw, 13rem);
+    height: auto;
+    min-height: clamp(10vh, 18vh, 30vh);
+    width: clamp(10vw, 30vw, 30vw);
+  }
+
+  .resume
+    .resumeRightWrapper
+    .resumeCardExperienceContainer
+    .resumeCard
+    .resumeCardNameContainer {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .resume
+    .resumeRightWrapper
+    .resumeCardExperienceContainer
+    .resumeCard
+    .resumeCardYear {
+    font-size: clamp(0.1rem, 2vw, 30rem);
+  }
+
+  .resume
+    .resumeRightWrapper
+    .resumeCardExperienceContainer
+    .resumeCard
+    .resumeCardName {
+    font-size: clamp(0.1rem, 3.5vw, 30rem);
+  }
+
+  .resume
+    .resumeRightWrapper
+    .resumeCardExperienceContainer
+    .resumeCard
+    .resumeCardLocContainer {
+    margin-top: clamp(0.1rem, 2vw, 3.5rem);
+  }
+
+  .resume
+    .resumeRightWrapper
+    .resumeCardExperienceContainer
+    .resumeCard
+    .resumeCardLocContainer
+    .LocBullet {
+    font-size: clamp(0.1rem, 4vw, 30rem);
+    margin-right: clamp(0.1rem, 1vw, 3.5rem);
+  }
+
+  .resume
+    .resumeRightWrapper
+    .resumeCardExperienceContainer
+    .resumeCard
+    .resumeCardLocContainer
+    .resumeCardLoc {
+    font-size: clamp(0.1rem, 2vw, 30rem);
+  }
+
+  .resume .resumeRightWrapper .resumeCardSkillsContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: none;
+    max-height: none;
+    min-width: 100%;
+    min-height: auto;
+    font-size: clamp(0.1rem, 10vw, 30rem);
+    width: auto;
+    overflow: auto;
+    flex-wrap: wrap;
+    gap: clamp(0.3rem, 2vw, 8rem);
+    justify-content: space-around;
+  }
+
+  .resume .resumeRightWrapper .resumeCardSkillsContainer div {
+    min-width: clamp(6vh, 6vh, 6vh);
+    min-height: clamp(6vh, 6vh, 6vh);
+    padding: clamp(0.1rem, 1vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+  }
+
+  .resume .resumeRightWrapper .resumeCardSkillsContainer div img {
+    width: clamp(5px, 8vw, 310px);
+  }
+
+  .resume .resumeRightWrapper .resumeCardSkillsContainer div .skillMysql {
+    width: clamp(5px, 10vw, 310px);
+    height: auto;
+  }
+
+  .resume .resumeRightWrapper .resumeAboutMeContainer {
+    flex-direction: column;
+    margin-top: clamp(0.5rem, 3vw, 20rem);
+    width: 100%;
+  }
+
+  .resume .resumeRightWrapper .resumeAboutMeContainer .leftAboutMeContainer {
+    width: 100%;
+    font-size: clamp(0.1rem, 3.5vw, 30rem);
+  }
+
+  .resume .resumeRightWrapper .resumeAboutMeContainer .rightAboutMeContainer {
+    width: 100%;
+    font-size: clamp(0.1rem, 3.5vw, 30rem);
+  }
+
+  .resume .resumeRightWrapper .resumeAboutMeContainer .leftAboutMeContainer div,
+  .resume
+    .resumeRightWrapper
+    .resumeAboutMeContainer
+    .rightAboutMeContainer
+    div {
+    margin-bottom: clamp(0.5rem, 3vw, 13rem);
+  }
+}

@@ -1,0 +1,211 @@
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-top: 12vh;
+}
+
+.home .homeLeftWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .homeLeftWrapper .homeImg {
+  width: clamp(50px, 24vw, 2700px);
+  height: auto;
+}
+
+.home .homeRightWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 7%;
+  line-height: 1.2;
+}
+
+.home .homeRightWrapper .homeCareer {
+  font-size: clamp(0.12rem, 1vw, 30rem);
+  color: #a0a6b3;
+}
+
+.home .homeRightWrapper .homeGreetings,
+.home .homeRightWrapper .homeName {
+  font-size: clamp(0.1rem, 4vw, 150rem);
+  font-weight: 700;
+}
+.home .homeRightWrapper .homeName {
+  color: #00ffff;
+}
+
+.home .homeRightWrapper .homeDesc {
+  max-width: 90%;
+  font-size: clamp(0.1rem, 0.7vw, 30rem);
+  color: #a0a6b3;
+}
+
+.home .homeRightWrapper .homeLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vw;
+  margin-top: clamp(0.2rem, 2vw, 13rem);
+}
+
+.home .homeRightWrapper button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: clamp(20em, 5vw, 200em);
+  padding: clamp(0.1rem, 1.1vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+  font-size: clamp(0.1rem, 1.2vw, 9rem);
+  font-weight: 700;
+  color: #00ffff;
+  border: 0.1em solid #1e90ff;
+  background-color: transparent;
+  transition: border 0.3s ease-out, transform 0.3s ease-out;
+  cursor: pointer;
+}
+
+.home .homeRightWrapper a {
+  text-decoration: none;
+  transition: border 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.home .homeRightWrapper #downloadA:hover {
+  transform: scale(1.05);
+}
+
+.home .homeRightWrapper .downloadIcon {
+  font-size: clamp(0.1rem, 1.5vw, 10rem);
+  margin-left: clamp(0.2rem, 1vw, 8rem);
+}
+
+.home .homeRightWrapper button:hover {
+  border: 0.1em solid #00ffff;
+  transform: scale(1.05);
+}
+
+.home .homeRightWrapper .homeLinks a {
+  font-size: clamp(0.1rem, 2vw, 13rem);
+  transition: transform 0.3s ease-out;
+}
+
+.home .homeRightWrapper .homeLinks a:hover {
+  transform: scale(1.2);
+}
+
+.homeBottomWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default to 4 columns */
+  gap: 0.5rem;
+  margin-top: clamp(0.5rem, 5.2vw, 36rem);
+}
+
+.homeBottomWrapper .homeCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: transform 0.3s ease-out;
+}
+
+.homeBottomWrapper .homeCard .homeCardNum {
+  font-size: clamp(0.2rem, 3.5vw, 30rem);
+  font-weight: 700;
+}
+
+.homeBottomWrapper .homeCard .homeCardName {
+  font-size: clamp(0.2rem, 0.9vw, 30rem);
+  font-weight: 400;
+  color: #00ffff;
+}
+
+.homeBottomWrapper .homeCard:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  .home {
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home .homeLeftWrapper .homeImg {
+    width: clamp(50px, 70vw, 2700px);
+  }
+
+  .home .homeRightWrapper {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .home .homeRightWrapper .homeCareer {
+    font-size: clamp(0.12rem, 4vw, 30rem);
+  }
+
+  .home .homeRightWrapper .homeGreetings,
+  .home .homeRightWrapper .homeName {
+    font-size: clamp(0.1rem, 10vw, 150rem);
+  }
+
+  .home .homeRightWrapper .homeDesc {
+    font-size: clamp(0.1rem, 2.5vw, 30rem);
+  }
+
+  .home .homeRightWrapper .homeLinks {
+    width: 70%;
+    margin-top: clamp(0.2rem, 4vw, 13rem);
+  }
+
+  .home .homeRightWrapper .homeLinks a {
+    font-size: clamp(0.1rem, 4.5vw, 13rem);
+  }
+
+  .home .homeRightWrapper button {
+    padding: clamp(0.1rem, 1.1vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+    font-size: clamp(0.1rem, 2.8vw, 9rem);
+  }
+
+  .home .homeRightWrapper .downloadIcon {
+    font-size: clamp(0.1rem, 3vw, 10rem);
+    margin-left: clamp(0.2rem, 1vw, 8rem);
+  }
+
+  .homeWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .homeBottomWrapper {
+    width: 80vw;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(30vw, 1fr)
+    ); /* 1 to 4 columns depending on space */
+  }
+
+  .homeBottomWrapper .homeCard .homeCardNum {
+    font-size: clamp(0.2rem, 8vw, 30rem);
+  }
+
+  .homeBottomWrapper .homeCard .homeCardName {
+    font-size: clamp(0.2rem, 3vw, 30rem);
+  }
+}

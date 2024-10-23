@@ -1,0 +1,223 @@
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  margin-top: 12vh;
+}
+
+.contact .contactLeftWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: clamp(1rem, 1.5vw, 5rem);
+  border-radius: clamp(0.5em, 1vw, 200em);
+  background-color: #0a0f29;
+}
+
+.contact .contactLeftWrapper .contactLeftWrapperHeader {
+  font-size: clamp(0.1rem, 2vw, 30rem);
+  font-weight: 700;
+  color: #00ffff;
+}
+
+.contact .contactLeftWrapper .contactLeftWrapperDescription {
+  font-size: clamp(0.1rem, 0.6vw, 30rem);
+  color: #a0a6b3;
+  width: 90%;
+  margin-top: clamp(0.5rem, 1vw, 13rem);
+}
+
+.contact .contactLeftWrapper form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: clamp(0.2rem, 0.5vw, 30rem);
+  margin-top: clamp(0.5rem, 2vw, 13rem);
+}
+
+.contact .contactLeftWrapper form .full-width {
+  grid-column: span 2; /* This makes the input take both columns */
+}
+
+.contact .contactLeftWrapper form input,
+.contact .contactLeftWrapper form textarea,
+.contact .contactLeftWrapper form select {
+  height: clamp(0.5rem, 1vw, 30rem);
+  padding: clamp(0.1rem, 0.5vw, 8rem);
+  font-size: clamp(0.1rem, 0.8vw, 30rem);
+  background-color: #020617;
+  border: 1px solid #0e1b36;
+  color: #ffffff;
+  border-radius: clamp(0.5em, 0.4vw, 200em);
+}
+
+.contact .contactLeftWrapper form select {
+  max-width: 100%;
+  padding: clamp(0.1rem, 0.5vw, 8rem);
+  font-size: clamp(0.1rem, 0.8vw, 30rem);
+  border-radius: clamp(0.5em, 0.4vw, 200em);
+  height: clamp(0.5rem, 2.2vw, 30rem);
+  color: gray;
+  cursor: pointer;
+}
+
+.contact .contactLeftWrapper form select option {
+  color: #ffffff; /* Color for the actual options */
+}
+
+.contact .contactLeftWrapper form select option:first-child {
+  display: none; /* Hide the default option */
+}
+
+.contact .contactLeftWrapper form textarea {
+  max-width: 100%;
+  min-height: clamp(0.5rem, 10vw, 60rem);
+  resize: none;
+}
+
+.contact .contactLeftWrapper form input:focus,
+.contact .contactLeftWrapper form textarea:focus,
+.contact .contactLeftWrapper form select:focus {
+  border-color: #00ffff; /* Set the border color to blue on focus */
+  outline: none; /* Remove the default outline if desired */
+}
+
+.contact .contactLeftWrapper form .submitButton {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .contactLeftWrapper form .submitButton button {
+  padding: clamp(0.1rem, 0.5vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+  border-radius: clamp(0.5em, 1vw, 200em);
+  font-size: clamp(0.1rem, 0.8vw, 30rem);
+  font-weight: 600;
+  border: none;
+  background-color: #00ffff;
+  color: #2d2e33;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: clamp(0.5rem, 1vw, 13rem);
+}
+
+.contact .contactLeftWrapper form .submitButton button:hover {
+  scale: 1.05;
+  background-color: #00c7c7;
+}
+
+.contact .contactRightWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  margin-left: clamp(0.5rem, 2vw, 15rem);
+  font-size: clamp(0.1rem, 1.2vw, 30rem);
+}
+
+.contact .contactRightWrapper .containers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: clamp(0.5rem, 2vw, 13rem);
+}
+
+.contact .contactRightWrapper .iconContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.1rem, 1.5vw, 30rem);
+  background-color: #0a0f29;
+  padding: clamp(0.1rem, 1.3vw, 8rem);
+  border-radius: clamp(0.5em, 1vw, 200em);
+  margin-right: clamp(0.5rem, 1.5vw, 13rem);
+  color: #00ffff;
+  width: clamp(0.5rem, 2vw, 30rem);
+}
+
+@media screen and (max-width: 768px) {
+  .contactWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: clamp(0.2rem, 1vw, 1rem);
+  }
+
+  .contact {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .contact .contactLeftWrapper {
+    width: 80%;
+    margin-top: clamp(0.5rem, 2vw, 13rem);
+  }
+
+  .contact .contactLeftWrapper .contactLeftWrapperHeader {
+    font-size: clamp(0.1rem, 5vw, 30rem);
+  }
+
+  .contact .contactLeftWrapper .contactLeftWrapperDescription {
+    font-size: clamp(0.1rem, 2vw, 30rem);
+  }
+
+  .contact .contactLeftWrapper form input,
+  .contact .contactLeftWrapper form textarea,
+  .contact .contactLeftWrapper form select {
+    height: 0.5rem;
+    padding: 0.5rem;
+    font-size: clamp(0.1rem, 2vw, 30rem);
+    background-color: #020617;
+    border: 1px solid #0e1b36;
+    color: #ffffff;
+    border-radius: clamp(0.5em, 0.4vw, 200em);
+  }
+
+  .contact .contactLeftWrapper form select {
+    padding: clamp(0.1rem, 1vw, 8rem);
+    font-size: clamp(0.1rem, 2vw, 30rem);
+    border-radius: clamp(0.5em, 0.4vw, 200em);
+    height: auto;
+    color: gray;
+    cursor: pointer;
+  }
+
+  .contact .contactLeftWrapper form textarea {
+    min-height: 8rem;
+  }
+
+  .contact .contactLeftWrapper form .submitButton button {
+    padding: clamp(0.1rem, 1vw, 8rem) clamp(0.1rem, 2vw, 8rem);
+    font-size: clamp(0.1rem, 2vw, 30rem);
+    margin-top: clamp(0.5rem, 2vw, 13rem);
+  }
+
+  .contact .contactRightWrapper {
+    width: 60%;
+    margin-left: 0;
+    margin-top: clamp(0.5rem, 2vw, 13rem);
+    display: flex;
+    font-size: clamp(0.1rem, 2.5vw, 30rem);
+  }
+
+  .contact .contactRightWrapper .containers {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .contact .contactRightWrapper .iconContainer {
+    font-size: clamp(0.1rem, 3vw, 30rem);
+    padding: clamp(0.1rem, 2vw, 8rem);
+    margin-right: clamp(0.5rem, 2vw, 13rem);
+    width: clamp(0.5rem, 5vw, 30rem);
+  }
+}

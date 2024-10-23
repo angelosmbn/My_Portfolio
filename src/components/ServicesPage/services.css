@@ -1,0 +1,77 @@
+.services {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+  margin-top: 12vh;
+  padding: clamp(0.2rem, 1vw, 1rem);
+  flex-wrap: wrap;
+}
+
+.services .serviceCard {
+  display: flex;
+  flex: 0 0 calc(50% - 5rem); /* Add margin for spacing between items */
+  margin: 1rem; /* Add margin for spacing between items */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 1px solid #a0a6b3;
+  min-height: 30vh; /* Ensure equal height */
+  box-sizing: border-box;
+  margin-bottom: clamp(0.2rem, 2vw, 30rem);
+}
+
+.services .serviceCard .serviceCardNum {
+  font-size: clamp(0.2rem, 3vw, 30rem);
+  font-weight: 700;
+}
+
+.services .serviceCard .serviceCardName {
+  font-size: clamp(0.2rem, 2vw, 30rem);
+  font-weight: 700;
+  margin-top: clamp(0.2rem, 1.5vw, 30rem);
+  color: #00ffff;
+}
+
+.services .serviceCard .serviceCardDesc {
+  font-size: clamp(0.2rem, 1vw, 30rem);
+  margin-top: clamp(0.2rem, 1.5vw, 30rem);
+  color: #a0a6b3;
+}
+
+@media screen and (max-width: 768px) {
+  .servicesWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: clamp(0.2rem, 1vw, 1rem);
+  }
+
+  .services {
+    flex-direction: column;
+    margin-top: 0;
+    width: 80%;
+  }
+
+  .services .serviceCard {
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+    min-height: auto;
+  }
+
+  .services .serviceCard .serviceCardNum {
+    font-size: clamp(0.2rem, 10vw, 30rem);
+  }
+
+  .services .serviceCard .serviceCardName {
+    font-size: clamp(0.2rem, 7vw, 30rem);
+    margin-top: clamp(0.2rem, 1.5vw, 30rem);
+  }
+
+  .services .serviceCard .serviceCardDesc {
+    font-size: clamp(0.2rem, 4vw, 30rem);
+    margin-top: clamp(0.2rem, 1.5vw, 30rem);
+  }
+}

@@ -1,0 +1,270 @@
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: auto;
+  margin-top: 12vh;
+}
+
+.project .projectLeftWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 25%;
+  margin-right: clamp(0.5rem, 1vw, 6rem);
+}
+
+.project .projectCard {
+  display: flex;
+  flex: 0 0 calc(50% - 5rem); /* Add margin for spacing between items */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 1px solid #a0a6b3;
+  min-height: 30vh; /* Ensure equal height */
+  box-sizing: border-box;
+  margin-bottom: clamp(0.2rem, 0.5vw, 30rem);
+  min-height: clamp(0.2rem, 33vh, 100rem);
+  position: relative;
+}
+.project .projectCard .projectCardNum {
+  font-size: clamp(0.2rem, 4vw, 30rem);
+  font-weight: 700;
+}
+
+.project .projectCard .projectCardName {
+  font-size: clamp(0.2rem, 1.5vw, 30rem);
+  font-weight: 700;
+  margin-top: clamp(0.2rem, 1vw, 30rem);
+}
+
+.project .projectCard .projectCardDesc {
+  font-size: clamp(0.2rem, 0.8vw, 30rem);
+  margin-top: clamp(0.2rem, 1vw, 30rem);
+  color: #a0a6b3;
+}
+
+.project .projectCard .projectCardLanguages {
+  bottom: 0;
+  font-size: clamp(0.2rem, 1vw, 30rem);
+  margin-top: clamp(0.2rem, 1vw, 30rem);
+  color: #00ffff;
+}
+
+.projectCardLinks {
+  display: flex;
+  flex: 0 0 calc(50% - 5rem); /* Add margin for spacing between items */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: calc(100% - 4rem);
+  font-size: clamp(0.2rem, 2.1vw, 30rem);
+}
+
+.projectCardLinks a {
+  cursor: pointer;
+}
+
+.project .projectRightWrapper {
+  display: flex;
+  overflow: hidden; /* Hide overflow to create sliding effect */
+  width: clamp(2rem, 45vw, 400rem);
+  align-items: flex-start;
+  justify-content: center;
+  height: clamp(0.2rem, 60vh, 500rem);
+  position: relative;
+}
+
+.projectRightWrapper .imageContainer {
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+  width: 300%; /* Each image takes up the full width */
+
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.project .projectRightWrapper img {
+  width: clamp(0rem, 100%, 600rem);
+  height: clamp(0rem, 50vh, 500rem);
+  margin-right: 2rem;
+  object-fit: contain;
+}
+
+.projectWindow .projectButtons {
+  position: absolute;
+  top: clamp(2rem, 52vh, 170rem);
+  left: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectWindow .projectButtons button {
+  width: clamp(1rem, 2vw, 10rem);
+  height: clamp(1rem, 2vw, 10rem);
+  margin: clamp(0.2rem, 1vw, 1rem);
+  margin-top: 0;
+  background-color: #00ffff;
+  border: none;
+  color: #000000;
+  font-size: clamp(0.2rem, 1.5vw, 30rem);
+  border-radius: clamp(0.3em, 0.2vw, 0.4em);
+  transition: 0.3s ease-in-out;
+}
+
+.projectWindow .projectButtons button:hover {
+  scale: 1.1;
+}
+
+@media screen and (max-width: 768px) {
+  .projectWindow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: clamp(0.2rem, 7vw, 10rem);
+    margin-top: 0;
+
+    padding: clamp(0.2rem, 1vw, 1rem);
+  }
+
+  .project {
+    flex-direction: column;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project .projectLeftWrapper {
+    width: 100%;
+
+    height: clamp(0.2rem, 65vw, 30rem);
+    display: block;
+    margin: 0;
+  }
+
+  .project .projectCard {
+    width: 100%;
+    min-height: fit-content;
+  }
+
+  .project .projectCard .projectCardNum {
+    font-size: clamp(0.2rem, 10vw, 30rem);
+  }
+
+  .project .projectCard .projectCardName {
+    font-size: clamp(0.2rem, 5vw, 30rem);
+    margin-top: clamp(0.2rem, 1.5vw, 30rem);
+  }
+
+  .project .projectCard .projectCardDesc {
+    font-size: clamp(0.2rem, 2.2vw, 30rem);
+    margin-top: clamp(0.2rem, 1.5vw, 30rem);
+  }
+
+  .project .projectCard .projectCardLanguages {
+    font-size: clamp(0.2rem, 3vw, 30rem);
+    margin-top: clamp(0.2rem, 5vw, 30rem);
+    position: relative;
+  }
+
+  .projectCardLinks {
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+    margin-top: clamp(0.2rem, 2vw, 30rem);
+  }
+
+  .projectCardLinks a {
+    font-size: clamp(0.2rem, 5vw, 30rem);
+  }
+
+  .project .projectRightWrapper {
+    display: flex;
+    width: clamp(2rem, 80vw, 400rem);
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: clamp(0.2rem, 110vh, 500rem);
+  }
+
+  .projectRightWrapper .imageContainer {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    width: 300%; /* Each image takes up the full width */
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .project .projectRightWrapper img {
+    width: clamp(0rem, 100%, 600rem);
+    height: clamp(0rem, 87vh, 500rem);
+    margin-right: 2rem;
+    object-fit: contain;
+  }
+
+  .projectWindow .projectButtons {
+    position: absolute;
+    top: clamp(2rem, 90vh, 170rem);
+    left: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectWindow .projectButtons button {
+    width: 2rem;
+    height: 2rem;
+    bottom: 30%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .project .projectRightWrapper {
+    display: flex;
+    width: clamp(2rem, 80vw, 400rem);
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: clamp(0.2rem, 24vh, 500rem);
+  }
+
+  .projectRightWrapper .imageContainer {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.5s ease-in-out; /* Smooth sliding effect */
+    width: 300%; /* Each image takes up the full width */
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .project .projectRightWrapper img {
+    width: clamp(0rem, 100%, 600rem);
+    height: clamp(0rem, 21vh, 500rem);
+    margin-right: 2rem;
+    object-fit: contain;
+  }
+
+  .projectWindow .projectButtons {
+    position: absolute;
+    top: clamp(2rem, 22vh, 170rem);
+    left: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projectWindow .projectButtons button {
+    width: clamp(1rem, 2vw, 10rem);
+    height: clamp(1rem, 2vw, 10rem);
+    bottom: 30%;
+  }
+}

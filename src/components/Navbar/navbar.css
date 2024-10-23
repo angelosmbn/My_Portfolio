@@ -1,0 +1,128 @@
+.navbar-large {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.navbar-large .myName {
+  display: flex; /* Make .myName a flex container */
+  align-items: center; /* Align text to the bottom */
+  justify-content: flex-start; /* Align text to the left */
+  font-size: clamp(0.2rem, 2.2vw, 20rem);
+  font-weight: 800;
+  transition: transform 0.3s ease-out; /* Smooth transition */
+  position: absolute;
+  /* Make it occupy full height of the parent */
+  cursor: pointer;
+}
+
+.navbar-large .myName .coloredPeriod {
+  color: #00ffff;
+}
+
+.navbar-large .navbarRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: flex-end; /* Keep vertical alignment centered */
+  font-size: clamp(0.2rem, 1vw, 10rem);
+  height: clamp(0.2rem, 2.2vw, 20rem);
+  margin-right: 5vw;
+}
+
+.navbar-large .pages a {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+  padding: clamp(0.2rem, 1vw, 10rem);
+  transition: transform color 0.3s ease-out; /* Include color in transition for smoothness */
+}
+
+.navbar-large .pages a:hover {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+#mode {
+  margin-left: 1rem;
+  font-size: clamp(0.5rem, 1.1vw, 5rem);
+}
+
+.navbar-small {
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.navbar-small .navbarHeader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 2rem;
+}
+
+.navbar-small .barButtonContainer .barButton {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  right: 60;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: calc(100vw - 7rem);
+  height: 100%;
+}
+
+.navbar-small .choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transform: translateX(-100%);
+  background-color: #020617;
+  z-index: 1000;
+  transition: transform 0.5s ease-out;
+}
+
+@media (max-width: 768px) {
+  .navbar-large {
+    display: none;
+  }
+  .navbar-small {
+    display: block;
+  }
+
+  .navbar-small .myName {
+    font-size: clamp(0.2rem, 5vw, 20rem);
+  }
+
+  .navbar-small .myName .coloredPeriod {
+    color: #00ffff;
+  }
+
+  .navbar-small a {
+    text-decoration: none;
+    color: #a0a6b3;
+  }
+}
+
+/* Optional: Define styles for the large navbar when on larger screens */
+@media (min-width: 769px) {
+  .navbar-large {
+    display: block; /* Show the large navbar on larger screens */
+  }
+  .navbar-small {
+    display: none; /* Hide the small navbar on larger screens */
+  }
+}
