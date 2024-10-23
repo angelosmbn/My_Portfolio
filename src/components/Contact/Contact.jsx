@@ -47,7 +47,7 @@ function Contact() {
             return; // Stop form submission
         }
     
-        formData.append("access_key", "aedd8e91-1811-4d96-9023-52c2caa0ceda");
+        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
     
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
