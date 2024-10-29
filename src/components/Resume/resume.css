@@ -52,7 +52,7 @@
   justify-content: flex-start;
   width: 75%;
   margin-left: clamp(0.5rem, 2vw, 15rem);
-  overflow: auto;
+  overflow: hidden;
   overflow-x: hidden;
 }
 
@@ -128,6 +128,24 @@
   .resumeRightWrapper
   .resumeCardExperienceContainer
   .resumeCard
+  .resumeCardName
+  a {
+  color: #ffffff;
+}
+
+.resume
+  .resumeRightWrapper
+  .resumeCardExperienceContainer
+  .resumeCard
+  .resumeCardName
+  a:hover {
+  color: #00ffff;
+}
+
+.resume
+  .resumeRightWrapper
+  .resumeCardExperienceContainer
+  .resumeCard
   .resumeCardLocContainer {
   display: flex;
   justify-content: flex-start; /* Aligns content to the left */
@@ -155,16 +173,20 @@
   font-size: clamp(0.1rem, 3vw, 30rem);
   display: flex;
   flex-direction: row;
-  margin-top: clamp(0.5rem, 3vw, 20rem);
-  max-height: clamp(34vh, 15vh, 60vh); /* Clamped max-height */
-  max-width: clamp(30vw, 15vw, 50vw); /* Clamped max-width */
-  min-height: clamp(34vh, 15vh, 60vh); /* Clamped max-height */
-  min-width: clamp(30vw, 15vw, 50vw);
+  max-height: clamp(34vh, 20vh, 60vh); /* Clamped max-height */
+  max-width: clamp(40vw, 20vw, 50vw); /* Clamped max-width */
+
+  min-width: clamp(40vw, 15vw, 50vw);
   overflow-y: auto; /* Enable vertical scrolling */
   overflow-x: hidden;
   box-sizing: border-box; /* Ensures padding/border are included in total width */
   flex-wrap: wrap; /* Wrap the content */
-  gap: clamp(0.3rem, 1vw, 8rem); /* Clamped space between the items */
+  gap: clamp(0.3rem, 2vw, 8rem); /* Clamped space between the items */
+  padding-top: clamp(0.5rem, 2vw, 13rem);
+}
+
+.resume .resumeRightWrapper .resumeCardSkillsContainerMain {
+  width: 100%;
 }
 
 .resume .resumeRightWrapper .resumeCardSkillsContainer > div:hover {
@@ -177,18 +199,6 @@
 
 .resume .resumeRightWrapper .resumeCardSkillsContainer > div:hover span {
   transform: scale(1.1); /* Scale text on hover */
-}
-
-.resume .resumeRightWrapper .resumeCardSkillsContainer div {
-  display: flex;
-  justify-content: center; /* Aligns content to the center */
-  align-items: center; /* Aligns content to the center */
-  background-color: #1a2148;
-  border-radius: clamp(0.5em, 1.5vw, 200em);
-  max-height: clamp(10vh, 25vh, 5vh); /* Clamped height */
-  min-height: clamp(10vh, 25vh, 5vh);
-  max-width: clamp(5vw, 0vw, 10vw);
-  min-width: clamp(5vw, 0vw, 10vw); /* Clamped width */
 }
 
 .resume .resumeRightWrapper .resumeCardSkillsContainer div img {
@@ -274,6 +284,40 @@
 
   align-items: center;
   justify-content: center;
+}
+
+.skills {
+  position: relative;
+  display: inline-block;
+  background-color: #1a2148;
+  padding: clamp(0.1rem, 1vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+  border-radius: clamp(0.5em, 1vw, 200em);
+  margin-bottom: clamp(0.1rem, 0.6vw, 5rem);
+  color: #ffffff;
+  font-size: clamp(0.1rem, 3.5vw, 30rem);
+  transition: background-color 0.3s ease-in-out;
+  width: clamp(4vw, 4vw, 20vw);
+  height: clamp(6vh, 4vh, 20vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#PopUpName {
+  position: absolute;
+  bottom: 105%;
+  opacity: 0; /* Start hidden */
+  font-size: clamp(0.1rem, 1vw, 30rem);
+  max-height: 5vh;
+  background-color: #455194;
+  padding: clamp(0.1rem, 0.1vw, 8rem) clamp(0.1rem, 0.5vw, 8rem);
+  border-radius: clamp(0.5em, 1vw, 200em);
+  color: #ffffff;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skills:hover #PopUpName {
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -413,14 +457,11 @@
     width: auto;
     overflow: auto;
     flex-wrap: wrap;
-    gap: clamp(0.3rem, 2vw, 8rem);
+    gap: clamp(0.3rem, 6vw, 8rem);
     justify-content: space-around;
-  }
-
-  .resume .resumeRightWrapper .resumeCardSkillsContainer div {
-    min-width: clamp(6vh, 6vh, 6vh);
-    min-height: clamp(6vh, 6vh, 6vh);
-    padding: clamp(0.1rem, 1vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+    overflow: visible;
+    margin-top: clamp(0.5rem, 12vw, 20rem);
+    padding-top: 0;
   }
 
   .resume .resumeRightWrapper .resumeCardSkillsContainer div img {
@@ -455,5 +496,43 @@
     .rightAboutMeContainer
     div {
     margin-bottom: clamp(0.5rem, 3vw, 13rem);
+  }
+
+  .resumeCardAward {
+    font-size: clamp(0.1rem, 3vw, 30rem);
+  }
+
+  .swal-custom-popup {
+    font-size: clamp(0.1rem, 2vw, 30rem);
+  }
+
+  .skills {
+    position: relative;
+    display: inline-block;
+    background-color: #1a2148;
+    padding: clamp(0.1rem, 1vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+    border-radius: clamp(0.5em, 1vw, 200em);
+    margin-bottom: clamp(0.1rem, 0.6vw, 5rem);
+    color: #ffffff;
+    font-size: clamp(0.1rem, 7vw, 30rem);
+    transition: background-color 0.3s ease-in-out;
+    width: clamp(6vw, 10vw, 10vw);
+    height: clamp(6vh, 5vh, 20vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #PopUpName {
+    position: absolute;
+    bottom: 105%;
+    opacity: 0; /* Start hidden */
+    font-size: clamp(0.1rem, 2vw, 30rem);
+    max-height: 5vh;
+    background-color: #455194;
+    padding: clamp(0.1rem, 1vw, 8rem) clamp(0.1rem, 1vw, 8rem);
+    border-radius: clamp(0.5em, 1vw, 200em);
+    color: #ffffff;
+    transition: opacity 0.3s ease-in-out;
   }
 }

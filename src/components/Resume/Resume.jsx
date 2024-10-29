@@ -7,6 +7,12 @@ import cpp from '../../assets/C++_logo.png';
 import mysql from '../../assets/MySQL-Logo.png';
 import oracle from '../../assets/Oracle-Logo.png';
 import phpmyadmin from '../../assets/PhpMyAdmin_logo.png';
+import CSE_Certificate from '../../assets/CSE_Certificate.png';
+import DevNet_Certificate from '../../assets/DevNet_Certificate.jpg';
+import CCNA_Certificate from '../../assets/CCNA_Certificate.jpg';
+import Python_Certificate from '../../assets/Python_Certificate.jpg';
+import Java_Certificate from '../../assets/Java_Certificate.jpg';
+
 //create use state for ui of buttons
 function Resume() {
 
@@ -21,10 +27,14 @@ function Resume() {
         education: 'A comprehensive overview of my academic background, highlighting my commitment to learning and growth in my field.',
         skills: 'A summary of my technical and interpersonal skills acquired through education and projects.',
         'about me': 'A brief introduction about myself, highlighting my interests and aspirations.',
+        certificates: 'A list of certificates and awards I have received throughout my academic and professional career.',
     };
 
     // Get the description based on the selected button
     const description = descriptions[selectedButton] || '';
+
+
+
 
     return (
         <>
@@ -58,6 +68,12 @@ function Resume() {
                                 Skills
                             </button>
                             <button 
+                                onClick={() => handleButtonChange('certificates')}
+                                style={selectedButton === 'certificates' ? { backgroundColor: '#51a5ff' } : {}}
+                            >
+                                Certificates
+                            </button>
+                            <button 
                                 onClick={() => handleButtonChange('about me')}
                                 style={selectedButton === 'about me' ? { backgroundColor: '#51a5ff' } : {}}
                             >
@@ -86,49 +102,75 @@ function Resume() {
 
                         {selectedButton === 'education' && (
                             <div className="resumeCardExperienceContainer">
-                                <ResumeCard year="2021-Present" name="Bachelor of Science in Computer Science with specialization in Software Engineering" loc="FEU Institute of Technology" />
+                                <ResumeCard year="2021-Present" name="BS in Computer Science with specialization in Software Engineering" award="Dean's Lister" loc="FEU Institute of Technology" />
                                 <ResumeCard year="2015-2021" name="Senior and Junior High School" award="With High Honors" loc="Assumpta Technical High School" />
                             </div>
                         )}
 
                         {selectedButton === 'skills' && (
+                            <div className="resumeCardSkillsContainerMain">
                             <div className="resumeCardSkillsContainer">
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">Python</div>
                                     <span><FontAwesomeIcon icon={faPython} /></span>
                                 </div>
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">Java</div>
                                     <span><FontAwesomeIcon icon={faJava} /></span>
                                 </div>
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">JavaScript</div>
                                     <span><FontAwesomeIcon icon={faJs} /></span>
                                 </div>
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">PHP</div>
                                     <span><FontAwesomeIcon icon={faPhp} /></span>
                                 </div>
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">React</div>
                                     <span><FontAwesomeIcon icon={faReact} /></span>
                                 </div>
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">Css 3</div>
                                     <span><FontAwesomeIcon icon={faCss3Alt} /></span>
                                 </div>
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">Android</div>
                                     <span><FontAwesomeIcon icon={faAndroid} /></span>
                                 </div>
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">Html 5</div>
                                     <span><FontAwesomeIcon icon={faHtml5} /></span>
                                 </div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">C++</div>
                                 <div className="skillCpp">
                                     <img src={cpp} alt="C++"  />
                                 </div>
-                                <div>
+                                </div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">MySQL</div>
                                     <img src={mysql} alt="MySQL" className="skillMysql" />
                                 </div>
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">Oracle</div>
                                     <img src={oracle} alt="MySQL" className="skillMysql" />
                                 </div>
-                                <div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">phpMyAdmin</div>
                                     <img src={phpmyadmin} alt="MySQL" className="skillMysql" />
                                 </div>
+                            </div>
+                            </div>
+                        )}
+
+                        {selectedButton === 'certificates' && (
+                            <div className="resumeCardExperienceContainer">
+                                <ResumeCard year="2024" name="Civil Service Eligibility - Professional" org="Civil Service Commission" img={CSE_Certificate} />
+                                <ResumeCard year="2023" name="DevNet Associate" org="Cisco" img={DevNet_Certificate} />
+                                <ResumeCard year="2023" name="CCNA: Introduction to Networks" org="Cisco" img={CCNA_Certificate} />
+                                <ResumeCard year="2023" name="IT Specialist - Python" org="Certiport - A Pearson VUE Business" img={Python_Certificate} />
+                                <ResumeCard year="2022" name="IT Specialist - Java" org="Certiport - A Pearson VUE Business" img={Java_Certificate} />
                             </div>
                         )}
 

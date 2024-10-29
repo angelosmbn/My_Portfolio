@@ -5,6 +5,7 @@ import { faEnvelope, faLocationDot, faPhone } from '@fortawesome/free-solid-svg-
 import Swal from 'sweetalert2'
 
 
+
 function Contact() {
     useEffect(() => {
         const selectElement = document.getElementById('service');

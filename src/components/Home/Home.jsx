@@ -13,7 +13,9 @@ function Home() {
             <div className="homeWindow">
                 <div className="home">
                     <div className="homeLeftWrapper">
-                        <img src={MyImage} alt="Ian" className="homeImg" />
+                        <div src={MyImage} alt="Ian" className="homeImg">
+                            <img src={MyImage} alt="Ian" className="homeImg" />
+                        </div>
                     </div>
                     <div className="homeRightWrapper">
                         

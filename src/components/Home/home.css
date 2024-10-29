@@ -17,6 +17,7 @@
 .home .homeLeftWrapper .homeImg {
   width: clamp(50px, 24vw, 2700px);
   height: auto;
+  border-radius: 50%;
 }
 
 .home .homeRightWrapper {

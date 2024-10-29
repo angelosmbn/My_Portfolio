@@ -95,6 +95,11 @@
   transition: transform 0.5s ease-out;
 }
 
+.navbar-small .choices a {
+  margin: clamp(0.2rem, 1vw, 10rem);
+  font-size: clamp(0.2rem, 6.5vw, 10rem);
+}
+
 @media (max-width: 768px) {
   .navbar-large {
     display: none;
