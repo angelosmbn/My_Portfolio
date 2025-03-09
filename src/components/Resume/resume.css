@@ -102,11 +102,20 @@
   .resumeCardExperienceContainer
   .resumeCard
   .resumeCardNameContainer,
-.resumeCardAwardContainer {
+.resumeCardAwardContainer, .resumeCardCompanyContainer {
   display: flex;
   justify-content: flex-start; /* Aligns content to the left */
   align-items: flex-start; /* Aligns content to the bottom */
   height: 100%; /* Keep height at 100% */
+  
+}
+
+.resumeCardAwardContainer .resumeCardAward, .resumeCardCompanyContainer .resumeCardAward {
+  font-size: clamp(0.5rem, .8vw, 30rem);
+}
+
+.resumeCardCompanyContainer {
+  align-items: center;
 }
 
 .resume .resumeRightWrapper .resumeCardExperienceContainer .resumeCard span {
@@ -496,10 +505,6 @@
     .rightAboutMeContainer
     div {
     margin-bottom: clamp(0.5rem, 3vw, 13rem);
-  }
-
-  .resumeCardAward {
-    font-size: clamp(0.1rem, 3vw, 30rem);
   }
 
   .swal-custom-popup {

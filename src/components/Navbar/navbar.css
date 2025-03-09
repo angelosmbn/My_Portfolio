@@ -9,14 +9,13 @@
 }
 
 .navbar-large .myName {
-  display: flex; /* Make .myName a flex container */
-  align-items: center; /* Align text to the bottom */
-  justify-content: flex-start; /* Align text to the left */
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
   font-size: clamp(0.2rem, 2.2vw, 20rem);
   font-weight: 800;
-  transition: transform 0.3s ease-out; /* Smooth transition */
+  transition: transform 0.3s ease-out; 
   position: absolute;
-  /* Make it occupy full height of the parent */
   cursor: pointer;
 }
 
@@ -24,24 +23,36 @@
   color: #00ffff;
 }
 
+.navbar-large .myName:hover {
+  transform: scale(1.1);
+}
+
 .navbar-large .navbarRight {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end; /* Align items to the right */
-  align-items: flex-end; /* Keep vertical alignment centered */
+  justify-content: flex-end;
+  align-items: flex-end;
   font-size: clamp(0.2rem, 1vw, 10rem);
   height: clamp(0.2rem, 2.2vw, 20rem);
   margin-right: 5vw;
 }
 
-.navbar-large .pages a {
+.navbar-large .pages span {
+  display: inline-block;
   color: rgba(255, 255, 255, 0.87);
   text-decoration: none;
-  padding: clamp(0.2rem, 1vw, 10rem);
-  transition: transform color 0.3s ease-out; /* Include color in transition for smoothness */
+  padding: clamp(0.2rem, 0.5vw, 2rem);
+  cursor: pointer;
+  transition: transform 0.3s ease-out, color 0.3s ease-out;
 }
 
-.navbar-large .pages a:hover {
+.navbar-large .pages span:hover {
+  color: #00ffff;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.navbar-large .pages .active {
   color: #00ffff;
   text-decoration: underline;
 }
@@ -122,12 +133,12 @@
   }
 }
 
-/* Optional: Define styles for the large navbar when on larger screens */
+
 @media (min-width: 769px) {
   .navbar-large {
-    display: block; /* Show the large navbar on larger screens */
+    display: block; 
   }
   .navbar-small {
-    display: none; /* Hide the small navbar on larger screens */
+    display: none; 
   }
 }

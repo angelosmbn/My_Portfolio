@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapPin, faStamp, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faMapPin, faStamp, faStar, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2'
 
 
@@ -51,6 +51,14 @@ function ResumeCard(props) {
                         <div className='resumeCardAward'>
                             <span><FontAwesomeIcon icon={faStar} /> </span>
                             {props.award}
+                        </div>
+                    </div>
+                )}
+                {props.company && (
+                    <div className="resumeCardCompanyContainer">
+                        <div className='resumeCardAward'>
+                            <span><FontAwesomeIcon icon={faBuilding} /> </span>
+                            {props.company}
                         </div>
                     </div>
                 )}

@@ -81,6 +81,7 @@
   transform: scale(1.05);
 }
 
+
 .home .homeRightWrapper .downloadIcon {
   font-size: clamp(0.1rem, 1.5vw, 10rem);
   margin-left: clamp(0.2rem, 1vw, 8rem);
@@ -89,6 +90,7 @@
 .home .homeRightWrapper button:hover {
   border: 0.1em solid #00ffff;
   transform: scale(1.05);
+  color: #50a8ff;
 }
 
 .home .homeRightWrapper .homeLinks a {
@@ -97,6 +99,7 @@
 }
 
 .home .homeRightWrapper .homeLinks a:hover {
+  color: #1e90ff;
   transform: scale(1.2);
 }
 
