@@ -48,7 +48,12 @@ function Contact() {
             return; // Stop form submission
         }
     
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+        console.log("Environment Variables:", import.meta.env);
+console.log("Access Key:", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
+
+        formData.append("access_key", accessKey);
+        
     
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
@@ -109,7 +114,8 @@ function Contact() {
                             <input type='text' name='firstName' placeholder='First name'/>
                             <input type='text' name='lastName' placeholder='Last name'/>
                             <input type='email' name='email' placeholder='Email'/>
-                            <input type='text' name='phoneNumber' placeholder='Phone number'/>
+                            <input type="text" name="phoneNumber" placeholder="Phone number" pattern="^(?=.*\d)[0-9+\-\s]+$" title="Only digits, spaces, +, and - are allowed. Must contain at least one digit."/>
+
                             <select name="service" id="service" className='full-width' defaultValue=''>
                                 <option value="" disabled>Select a service</option>
                                 <option value="Web Development">Web Development</option>
