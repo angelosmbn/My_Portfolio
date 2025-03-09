@@ -54,10 +54,10 @@ function Home() {
                 </div>
 
                 <div className="homeBottomWrapper">
-                    <HomeCard num={3} name1="Projects" name2="Completed"/>
-                    <HomeCard num={4} name1="Programming" name2="Languages"/>
-                    <HomeCard num={2} name1="Freelance" name2="Experience"/>
-                    <HomeCard num={4} name1="Certifications" name2="earned"/>
+                    <HomeCard num={4} name1="Projects" name2="Completed"/>
+                    <HomeCard num={5} name1="Programming" name2="Languages"/>
+                    <HomeCard num={1} name1="Years of" name2="Work Experience"/>
+                    <HomeCard num={4} name1="Certifications" name2="Earned"/>
                 </div>
             </div>
         </>

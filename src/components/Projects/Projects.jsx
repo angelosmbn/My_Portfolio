@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Project1 from '../../assets/HRIS_ATHS_PROJECT.png';
 import Project2 from '../../assets/IMS_ATHS_PROJECT.png';
 import Project3 from '../../assets/Intelliwatch_Project.png';
+import Project4 from '../../assets/tlrms_Project.png';
 import './projects.css';
 import ProjectsCard from "./ProjectCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -37,6 +38,14 @@ function Projects() {
             languages: "Python, YOLOv8, Gemini API, Twilio, MySQL",
             image: Project3,
             gitLink: "https://github.com/angelosmbn/IntelliWatch"
+        },
+        {
+            num: "04",
+            name: "QR-Enabled Tool Management System",
+            desc: "The QR-Enabled Tool Management System is a streamlined solution designed for efficient tracking and management of tools using Java and SQLite. This system utilizes a camera or QR code scanner to register and retrieve tool information quickly. Each tool is assigned a unique QR code, which is generated and saved within the system, ensuring seamless inventory management and easy tool identification.",
+            languages: "Java, SQLite",
+            image: Project4,
+            gitLink: "https://github.com/angelosmbn/"
         }
         
     ];
