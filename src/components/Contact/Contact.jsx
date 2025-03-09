@@ -49,9 +49,6 @@ function Contact() {
         }
     
         const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-        console.log("Environment Variables:", import.meta.env);
-console.log("Access Key:", import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
-
         formData.append("access_key", accessKey);
         
     
