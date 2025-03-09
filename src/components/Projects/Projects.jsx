@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Project1 from '../../assets/HRIS_ATHS_PROJECT.png';
 import Project2 from '../../assets/IMS_ATHS_PROJECT.png';
-import Project3 from '../../assets/IntelliWatch_Project.png';
+import Project3 from '../../assets/Intelliwatch_Project.png';
 import './projects.css';
 import ProjectsCard from "./ProjectCard";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
