@@ -42,7 +42,7 @@ function Projects() {
         {
             num: "04",
             name: "QR-Enabled Tool Management System",
-            desc: "The QR-Enabled Tool Management System is a streamlined solution designed for efficient tracking and management of tools using Java and SQLite. This system utilizes a camera or QR code scanner to register and retrieve tool information quickly. Each tool is assigned a unique QR code, which is generated and saved within the system, ensuring seamless inventory management and easy tool identification.",
+            desc: "Developed a Java-based QR-Enabled Tool Management System for real-time tracking and inventory management. It assigns unique QR codes to tools, enabling quick registration and retrieval via a scanner. Built with Java and SQLite for secure data handling, it uses a multi-threaded architecture for smooth performance. The user-friendly Java Swing interface includes custom table actions for easy monitoring and status updates. Designed for efficiency, it streamlines tool tracking, minimizes errors, and enhances accountability in maintenance workflows.",
             languages: "Java, SQLite",
             image: Project4,
             gitLink: "https://github.com/angelosmbn/"
