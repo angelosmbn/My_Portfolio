@@ -83,11 +83,17 @@
 .navbar-small .barButtonContainer .barButton {
   background-color: transparent;
   border: none;
-  position: fixed; /* Keeps it in place */
-  top: 2rem; /* Adjust as needed */
-  right: 2rem; /* Adjust as needed */
+  position: absolute; /* Default: Positioned inside .barButtonContainer */
+  top: 2rem;
+  right: 2rem;
   z-index: 10000; /* Ensures it's above the menu */
 }
+
+/* When menu is open, make it fixed */
+.navbar-small .barButton.fixed {
+  position: fixed;
+}
+
 
 
 .navbar-small .choices {
@@ -114,7 +120,12 @@
 
 .navbar-small .choices a {
   margin: clamp(0.2rem, 1vw, 10rem);
-  font-size: clamp(0.2rem, 6.5vw, 10rem);
+  font-size: clamp(0.2rem, 10vw, 10rem);
+}
+
+.navbar-small .choices span {
+  margin: clamp(0.2rem, 1vw, 10rem);
+  font-size: clamp(0.2rem, 6vw, 10rem);
 }
 
 @media (max-width: 768px) {

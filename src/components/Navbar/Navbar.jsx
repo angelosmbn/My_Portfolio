@@ -43,7 +43,7 @@ function Navbar({ selectedPage, onPageChange }) {
                         Ian<span className="coloredPeriod">.</span>
                     </div>
                     <div className="barButtonContainer">
-                        <button className="barButton" onClick={handleButtonClick}>
+                        <button className={`barButton ${menuOpen ? 'fixed' : ''}`}  onClick={handleButtonClick}>
                             <FontAwesomeIcon icon={faBars} style={{ fontSize: 'clamp(.8rem, 1.5vw, 10rem)' }} />
                         </button>
                     </div>
