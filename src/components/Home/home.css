@@ -197,6 +197,15 @@
     height: auto;
   }
 
+  .homeBottomWrapper .homeCard {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    transition: transform 0.3s ease-out;
+
+  }
+
   .homeBottomWrapper {
     width: 80vw;
     grid-template-columns: repeat(

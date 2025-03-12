@@ -67,6 +67,9 @@ body {
   min-height: 90vh;
 }
 
+
+
+
 .overlay {
   position: fixed;
   top: 0;
@@ -93,4 +96,13 @@ body {
     max-height: 100vh;
     min-height: 100vh;
   }
+  .navbar-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other elements */
+    height: 60px;
+  }
+
 }

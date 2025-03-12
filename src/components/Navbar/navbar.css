@@ -83,28 +83,34 @@
 .navbar-small .barButtonContainer .barButton {
   background-color: transparent;
   border: none;
-  position: relative;
-  right: 60;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  width: calc(100vw - 7rem);
-  height: 100%;
+  position: fixed; /* Keeps it in place */
+  top: 2rem; /* Adjust as needed */
+  right: 2rem; /* Adjust as needed */
+  z-index: 10000; /* Ensures it's above the menu */
 }
+
 
 .navbar-small .choices {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Center the navigation items */
   width: 100vw;
   height: 100vh;
-  position: absolute;
-  transform: translateX(-100%);
+  position: fixed; /* Ensures it covers everything */
+  top: 0;
+  left: 0;
   background-color: #020617;
-  z-index: 1000;
+  z-index: 9999; /* Highest priority */
   transition: transform 0.5s ease-out;
+  transform: translateX(-100%); /* Initially hidden */
+  position: fixed;
 }
+
+.navbar-small .choices.open {
+  transform: translateX(0); /* Fully visible */
+}
+
 
 .navbar-small .choices a {
   margin: clamp(0.2rem, 1vw, 10rem);

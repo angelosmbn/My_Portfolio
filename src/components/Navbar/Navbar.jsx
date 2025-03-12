@@ -7,6 +7,8 @@ function Navbar({ selectedPage, onPageChange }) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleButtonClick = () => {
+
+        console.log("123")
         setMenuOpen(!menuOpen);
     };
 
@@ -61,6 +63,7 @@ function Navbar({ selectedPage, onPageChange }) {
                         </span>
                     ))}
                 </nav>
+
             </div>
         </>
     );
