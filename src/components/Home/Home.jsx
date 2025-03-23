@@ -34,9 +34,7 @@ function Home() {
                                     </div>
                                 </button>
                             </a>
-
-
-                        
+                            
                             <a href="https://edith.feutech.edu.ph/briefcase/profile/angelosmbn">
                                 <FontAwesomeIcon icon={faBriefcase} />
                             </a>

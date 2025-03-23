@@ -154,10 +154,12 @@
     width: 80%;
     margin-left: 0;
     margin-top: 2rem;
+    text-align: center;
   }
 
   .home .homeRightWrapper .homeCareer {
     font-size: clamp(0.12rem, 4vw, 30rem);
+    
   }
 
   .home .homeRightWrapper .homeGreetings,
@@ -167,11 +169,13 @@
 
   .home .homeRightWrapper .homeDesc {
     font-size: clamp(0.1rem, 2.5vw, 30rem);
+    max-width: 100%;
   }
 
   .home .homeRightWrapper .homeLinks {
-    width: 70%;
+    width: 100%;
     margin-top: clamp(0.2rem, 4vw, 13rem);
+    text-align: center;
   }
 
   .home .homeRightWrapper .homeLinks a {
@@ -203,7 +207,6 @@
     justify-content: start;
     width: 100%;
     transition: transform 0.3s ease-out;
-
   }
 
   .homeBottomWrapper {
