@@ -7,8 +7,6 @@ function Navbar({ selectedPage, onPageChange }) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleButtonClick = () => {
-
-        console.log("123")
         setMenuOpen(!menuOpen);
     };
 
@@ -23,17 +21,16 @@ function Navbar({ selectedPage, onPageChange }) {
                 <nav className="navbarRight">
                     <div className="pages">
                         {['home', 'services', 'resume', 'projects', 'contact'].map((page) => (
-                        <span 
-                            key={page} 
-                            className={selectedPage === page ? 'active' : ''}
-                            onClick={() => onPageChange(page)}
-                        >
-                            {page.charAt(0).toUpperCase() + page.slice(1)}
-                        </span>
+                            <span 
+                                key={page} 
+                                className={selectedPage === page ? 'active' : ''}
+                                onClick={() => onPageChange(page)}
+                            >
+                                {page.charAt(0).toUpperCase() + page.slice(1)}
+                            </span>
                         ))}
                     </div>
                 </nav>
-
             </div>
 
             {/* Small Screen Navbar */}
@@ -43,7 +40,7 @@ function Navbar({ selectedPage, onPageChange }) {
                         Ian<span className="coloredPeriod">.</span>
                     </div>
                     <div className="barButtonContainer">
-                        <button className={`barButton ${menuOpen ? 'fixed' : ''}`}  onClick={handleButtonClick}>
+                        <button className={`barButton ${menuOpen ? 'fixed' : ''}`} onClick={handleButtonClick}>
                             <FontAwesomeIcon icon={faBars} style={{ fontSize: 'clamp(.8rem, 1.5vw, 10rem)' }} />
                         </button>
                     </div>
@@ -63,7 +60,6 @@ function Navbar({ selectedPage, onPageChange }) {
                         </span>
                     ))}
                 </nav>
-
             </div>
         </>
     );

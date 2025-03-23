@@ -21,23 +21,23 @@ const navbarVariants = {
 
 function App() {
     const validPages = ["home", "services", "resume", "projects", "contact"];
-    const initialPage = validPages.includes(window.location.pathname.substring(1))
-        ? window.location.pathname.substring(1)
-        : "home";
-
+    
+    // Initialize the page based on the first load
+    const initialPage = sessionStorage.getItem("currentPage") || "home";
+    
     const [selectedPage, setSelectedPage] = useState(initialPage);
     const [overlayVisible, setOverlayVisible] = useState(false);
-    const [direction, setDirection] = useState(1);
     const [firstLoad, setFirstLoad] = useState(true);
 
     useEffect(() => {
-        if (window.location.pathname === "/") {
-            window.history.replaceState({ page: "home" }, "", "/home");
-        }
+        // Store the current page in sessionStorage to maintain state on refresh
+        sessionStorage.setItem("currentPage", selectedPage);
+
+        // Add the current page to the history stack without showing it in the URL
+        window.history.replaceState({ page: selectedPage }, "");
 
         const handlePopState = (event) => {
             if (event.state?.page) {
-                setDirection(-1);
                 setOverlayVisible(true);
                 setTimeout(() => {
                     setSelectedPage(event.state.page);
@@ -48,7 +48,7 @@ function App() {
 
         window.addEventListener("popstate", handlePopState);
         return () => window.removeEventListener("popstate", handlePopState);
-    }, []);
+    }, [selectedPage]);
 
     useEffect(() => {
         setTimeout(() => setFirstLoad(false), 500);
@@ -56,11 +56,13 @@ function App() {
 
     const handlePageChange = (page) => {
         if (page !== selectedPage) {
-            setDirection(1);
             setOverlayVisible(true);
+
+            // Push new state to the history stack without changing the URL
+            window.history.pushState({ page }, "");
+            
             setTimeout(() => {
                 setSelectedPage(page);
-                window.history.pushState({ page }, "", `/${page}`);
                 setOverlayVisible(false);
             }, 500);
         }
@@ -70,7 +72,7 @@ function App() {
         <div className="App">
             <div className="MainComponent">
                 <div className="content-wrapper">
-                    {/* Navbar with Fade In/Out Animation */}
+                    {/* Navbar with Animation */}
                     <AnimatePresence mode="wait">
                         {!overlayVisible && (
                             <motion.div
