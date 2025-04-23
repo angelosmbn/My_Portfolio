@@ -19,6 +19,8 @@ import react from '../../assets/react.svg';
 import css from '../../assets/css-logo.png';
 import android from '../../assets/android-logo.png';
 import html from '../../assets/html-logo.png';
+import git from '../../assets/git-logo.png';
+import docker from '../../assets/docker-logo.png';
 
 //create use state for ui of buttons
 function Resume() {
@@ -103,7 +105,8 @@ function Resume() {
                             
                         {selectedButton === 'experience' && (
                             <div className="resumeCardExperienceContainer">
-                                <ResumeCard year="2024-2025" name="Full-Stack Developer Intern" company="Acheive Without Borders" loc="Makati, Metro Manila" />
+                                <ResumeCard year="2025-Present" name="Junior Full Stack Developer" company="Acheive Without Borders" loc="Makati, Metro Manila" />
+                                <ResumeCard year="2024-2025" name="Full Stack Developer Intern" company="Acheive Without Borders" loc="Makati, Metro Manila" />
                                 <ResumeCard year="2023-Present" name="Freelancer" loc="San Simon, Pampanga" />
                             </div>
                         )}
@@ -169,6 +172,14 @@ function Resume() {
                                 <div className="skills">
                                     <div className="PopUpName" id="PopUpName">phpMyAdmin</div>
                                     <img src={phpmyadmin} alt="phpMyAdmin" className="skillMysql" />
+                                </div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">Git</div>
+                                    <img src={git} alt="Git" className="skillMysql" />
+                                </div>
+                                <div className="skills">
+                                    <div className="PopUpName" id="PopUpName">Docker</div>
+                                    <img src={docker} alt="Docker" className="skillMysql" />
                                 </div>
                             </div>
                             </div>
