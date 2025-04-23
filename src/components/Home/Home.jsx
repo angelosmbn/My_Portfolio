@@ -19,10 +19,10 @@ function Home() {
                     </div>
                     <div className="homeRightWrapper">
                         
-                        <div className="homeCareer">Software Developer</div>
+                        <div className="homeCareer">Full Stack Developer</div>
                         <div className="homeGreetings">Hi, I'm</div>
                         <div className="homeName">Ian Angelo<br/>Simbulan</div>
-                        <div className="homeDesc">I am a computer science student with a passion for developing innovative and efficient software solutions, and I am proficient in various programming languages and technologies.</div>
+                        <div className="homeDesc">I’m a Full Stack Developer with a strong foundation in Computer Science and a passion for building innovative, scalable, and efficient software solutions. I specialize in both front-end and back-end development, and I’m proficient in a wide range of programming languages, frameworks, and technologies.</div>
                         <div className="homeLinks">
                             <a href="/Ian_Angelo_Simbulan_Resume.pdf" download="Ian_Angelo_Simbulan_Resume.pdf" id="downloadA">
                                 <button>
@@ -54,7 +54,7 @@ function Home() {
                 <div className="homeBottomWrapper">
                     <HomeCard num={4} name1="Projects" name2="Completed"/>
                     <HomeCard num={5} name1="Programming" name2="Languages"/>
-                    <HomeCard num={1} name1="Years of" name2="Work Experience"/>
+                    <HomeCard num={2} name1="Years of" name2="Work Experience"/>
                     <HomeCard num={5} name1="Certifications" name2="Earned"/>
                 </div>
             </div>

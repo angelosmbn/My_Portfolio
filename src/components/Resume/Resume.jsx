@@ -204,7 +204,7 @@ function Resume() {
                                     </div>
                                     <div>
                                         <span>Experience&nbsp;&nbsp;</span>
-                                        0.3 years
+                                        2 years
                                     </div>
                                     <div>
                                         <span>Nationality&nbsp;&nbsp;</span>
@@ -218,7 +218,7 @@ function Resume() {
                                 <div className="rightAboutMeContainer">
                                     <div>
                                         <span>Phone&nbsp;&nbsp;</span>
-                                        Ian Angelo M. Simbulan
+                                        0927-134-0561
                                     </div>
                                     <div>
                                         <span>Age&nbsp;&nbsp;</span>
