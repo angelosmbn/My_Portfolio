@@ -105,8 +105,8 @@ function Resume() {
                             
                         {selectedButton === 'experience' && (
                             <div className="resumeCardExperienceContainer">
-                                <ResumeCard year="2025-Present" name="Junior Full Stack Developer" company="Acheive Without Borders" loc="Makati, Metro Manila" />
-                                <ResumeCard year="2024-2025" name="Full Stack Developer Intern" company="Acheive Without Borders" loc="Makati, Metro Manila" />
+                                <ResumeCard year="2025-Present" name="Junior Full Stack Developer" company="Achieve Without Borders" loc="Makati, Metro Manila" />
+                                <ResumeCard year="2024-2025" name="Full Stack Developer Intern" company="Achieve Without Borders" loc="Makati, Metro Manila" />
                                 <ResumeCard year="2023-Present" name="Freelancer" loc="San Simon, Pampanga" />
                             </div>
                         )}
