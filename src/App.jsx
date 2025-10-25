@@ -8,7 +8,7 @@ import Projects from "./components/Projects/Projects.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 
 function App() {
-    const isDown = process.env.REACT_APP_IS_DOWN === "true";
+    const isDown = import.meta.env.REACT_APP_IS_DOWN === "true";
 
     if (isDown) {
         return (
