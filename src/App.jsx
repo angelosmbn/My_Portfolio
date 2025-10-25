@@ -6,7 +6,6 @@ import Services from "./components/ServicesPage/Services.jsx";
 import Resume from "./components/Resume/Resume.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import Contact from "./components/Contact/Contact.jsx";
-import maintenanceGif from "./assets/maintenance.gif"; // Import the GIF
 
 function App() {
     const isDown = process.env.REACT_APP_IS_DOWN === "true";
@@ -15,7 +14,7 @@ function App() {
         return (
             <div className="App" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                 <div className="MaintenanceContainer" style={{ textAlign: 'center' }}>
-                    <img src={maintenanceGif} alt="Maintenance Mode" style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }} />
+                    <img src="/assets/maintenance.gif" alt="Maintenance Mode" style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }} />
                     <p style={{ fontSize: '1.2rem', color: '#555' }}>My portfolio is getting a glow-up right now. New projects arriving soon!</p>
                 </div>
             </div>
