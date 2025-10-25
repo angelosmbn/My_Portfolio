@@ -22,6 +22,7 @@ function App() {
         );
     } else {
         console.log('isDown else1:', process.env.VITE_REACT_APP_IS_DOWN);
+        console.log('isDown else2:', import.meta.env.VITE_WEB3FORMS_ACCESS_KEY);
     }
 
     const overlayVariants = {
