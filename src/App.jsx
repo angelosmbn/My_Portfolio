@@ -11,6 +11,7 @@ function App() {
     const isDown = import.meta.env.REACT_APP_IS_DOWN === "true";
 
     if (isDown) {
+        console.log('isDown:', isDown);
         return (
             <div className="App" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                 <div className="MaintenanceContainer" style={{ textAlign: 'center' }}>
@@ -19,6 +20,8 @@ function App() {
                 </div>
             </div>
         );
+    } else {
+        console.log('isDown else:', isDown);
     }
 
     const overlayVariants = {
