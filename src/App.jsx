@@ -14,8 +14,7 @@ function App() {
         return (
             <div className="App" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                 <div className="MaintenanceContainer" style={{ textAlign: 'center' }}>
-                    <img src="../../assets/maintenance.gif" alt="Maintenance Mode" style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }} />
-                    <p style={{ fontSize: '1.2rem', color: '#555' }}>My portfolio is getting a glow-up right now. New projects arriving soon!</p>
+                    <p style={{ fontSize: '2rem', color: '#fff' }}>My portfolio is getting a glow-up right now. New projects arriving soon!</p>
                 </div>
             </div>
         );
