@@ -6,20 +6,34 @@ import Services from "./components/ServicesPage/Services.jsx";
 import Resume from "./components/Resume/Resume.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import Contact from "./components/Contact/Contact.jsx";
-
-const overlayVariants = {
-    hidden: { y: "100%" },
-    visible: { y: "0" },
-    exit: { y: "-100%" },
-};
-
-const navbarVariants = {
-    hidden: { opacity: 0 },
-    visible: (firstLoad) => ({ opacity: 1, transition: { delay: firstLoad ? 0 : 0.3, duration: 0.5 } }),
-    exit: { opacity: 0, transition: { delay: 0.2, duration: 0.5 } },
-};
+import maintenanceGif from "./assets/maintenance.gif"; // Import the GIF
 
 function App() {
+    const isDown = process.env.REACT_APP_IS_DOWN === "true";
+
+    if (isDown) {
+        return (
+            <div className="App" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+                <div className="MaintenanceContainer" style={{ textAlign: 'center' }}>
+                    <img src={maintenanceGif} alt="Maintenance Mode" style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }} />
+                    <p style={{ fontSize: '1.2rem', color: '#555' }}>My portfolio is getting a glow-up right now. New projects arriving soon!</p>
+                </div>
+            </div>
+        );
+    }
+
+    const overlayVariants = {
+        hidden: { y: "100%" },
+        visible: { y: "0" },
+        exit: { y: "-100%" },
+    };
+
+    const navbarVariants = {
+        hidden: { opacity: 0 },
+        visible: (firstLoad) => ({ opacity: 1, transition: { delay: firstLoad ? 0 : 0.3, duration: 0.5 } }),
+        exit: { opacity: 0, transition: { delay: 0.2, duration: 0.5 } },
+    };
+
     const validPages = ["home", "services", "resume", "projects", "contact"];
     
     // Initialize the page based on the first load
