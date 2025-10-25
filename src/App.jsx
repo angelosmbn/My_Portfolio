@@ -8,10 +8,10 @@ import Projects from "./components/Projects/Projects.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 
 function App() {
-    const isDown = import.meta.env.REACT_APP_IS_DOWN === "true";
+    const isDown = import.meta.env.VITE_REACT_APP_IS_DOWN === "true";
 
     if (isDown) {
-        console.log('isDown:', import.meta.env.REACT_APP_IS_DOWN);
+        console.log('isDown:', import.meta.env.VITE_REACT_APP_IS_DOWN);
         return (
             <div className="App" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
                 <div className="MaintenanceContainer" style={{ textAlign: 'center' }}>
@@ -21,7 +21,7 @@ function App() {
             </div>
         );
     } else {
-        console.log('isDown else:', import.meta.env.REACT_APP_IS_DOWN);
+        console.log('isDown else:', import.meta.env.VITE_REACT_APP_IS_DOWN);
     }
 
     const overlayVariants = {
